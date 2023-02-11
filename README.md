@@ -1,5 +1,5 @@
 # MSDC-NILM
-Our paper MSDC: Exploiting Multi-State Power Consumption in Non-intrusive Load Monitoring based on A Dual-CNN is accepted by AAAI 2023. The pre-print version is uploaded (MSDC-preprint.pdf)
+Our paper MSDC: Exploiting Multi-State Power Consumption in Non-intrusive Load Monitoring based on A Dual-CNN is accepted by AAAI 2023. The pre-print version is uploaded (MSDC-preprint.pdf).
 authors: Jialing He 1, Jiamou Liu 2, Zijian Zhang 3, Yang Chen 2,  Yiwei Liu 4,  Bakh Khoussainov 5, Liehuang Zhu 3.
 affiliations: 1 College of Computer Science, Chongqing University, Chongqing, China, 400044.
               2 School of Computer Science, The University of Auckland, Auckland 1142, New Zealand.
