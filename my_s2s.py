@@ -377,13 +377,9 @@ pred_sh = np.array(np.argmax(pred_s, axis=1))
 import metric
 
 sample_second = 6.0  # sample time is 6 seconds
-# print('F1:{0}'.format(metric.get_F1(gt.flatten(), pred.flatten(), threshold)))
-# print('NDE:{0}'.format(metric.get_nde(gt.flatten(), pred.flatten())))
-# print('MAE_p:{0}'.format(metric.get_abs_error(gt.flatten(), pred_p.flatten())))
-# print('SAE_p:{0}'.format(metric.get_sae(gt.flatten(), pred_p.flatten(), sample_second)))
-print(metric.get_abs_error(gt.flatten(), pred.flatten()))
-print(metric.get_sae(gt.flatten(), pred.flatten(), sample_second))
-print(metric.get_sae_delta(gt.flatten(), pred.flatten(), 1200))
+print('MAE:{0}'.format(metric.get_abs_error(gt.flatten(), pred.flatten())))
+print('SAE:{0}'.format(metric.get_sae(gt.flatten(), pred.flatten(), sample_second)))
+print('SAE_Delta:{}'.format(metric.get_sae_delta(gt.flatten(), pred.flatten(), 1200)))
 print(metric.get_sae_delta(gt.flatten(), pred.flatten(), 600))
 
 print(np.mean(gt_s.flatten() == pred_sh.flatten()))
