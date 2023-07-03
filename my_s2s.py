@@ -150,6 +150,7 @@ torch.backends.cudnn.benchmark = False
 
 
 def load_dataset():
+    # 训练测试不在同一房间
     tra_x = args.data_dir + args.appliance_name + '_mains_' + 'tra_small'  # save path for mains
     val_x = args.data_dir + args.appliance_name + '_mains_' + 'val'
 
@@ -162,6 +163,20 @@ def load_dataset():
     test_x = args.data_dir + args.appliance_name + '_test_x'
     test_y = args.data_dir + args.appliance_name + '_test_gt'
     test_s = args.data_dir + args.appliance_name + '_test_gt_s'
+     #单房间
+    # tra_x = args.data_dir + args.appliance_name + 'house6' + '_mains_' + 'tra_small'  # save path for mains
+    # val_x = args.data_dir + args.appliance_name + 'house6' + '_mains_' + 'val'
+    #
+    # tra_y = args.data_dir + args.appliance_name + 'house6' + '_tra_small' + '_' + 'pointnet'  # save path for target
+    # val_y = args.data_dir + args.appliance_name + 'house6' + '_val' + '_' + 'pointnet'
+    #
+    #
+    # tra_s = args.data_dir + args.appliance_name + 'house6' + '_tra_small' + '_' + 'pointnet_s'  # save path for target
+    # val_s = args.data_dir + args.appliance_name + 'house6' + '_val' + '_' + 'pointnet_s'
+    #
+    # test_x = args.data_dir + args.appliance_name + 'house6' + '_test_x'
+    # test_y = args.data_dir + args.appliance_name + 'house6' + '_test_gt'
+    # test_s = args.data_dir + args.appliance_name + 'house6' + '_test_gt_s'
 
     tra_set_x = np.load(tra_x + '.npy').astype(np.float32)
     tra_set_y = np.load(tra_y + '.npy').astype(np.float32)
@@ -172,6 +187,7 @@ def load_dataset():
     test_set_x = np.load(test_x + '.npy').astype(np.float32)
     test_set_y = np.load(test_y + '.npy').astype(np.float32)
     test_set_s = np.load(test_s + '.npy').astype(np.float32)
+    
 
     print('training set:', tra_set_x.shape, tra_set_y.shape, tra_set_s.shape)
     print('validation set:', val_set_x.shape, val_set_y.shape, val_set_s.shape)
